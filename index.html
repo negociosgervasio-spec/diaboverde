@@ -1,0 +1,595 @@
+<!doctype html>
+<html lang="pt-BR" class="h-full">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Diabo Verde FTW - Termogenico</title>
+    <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
+    <script src="/_sdk/element_sdk.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&amp;family=Space+Mono:wght@400;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              dark: "#1A1A1A",
+              darker: "#111111",
+              primary: "#A5FC5F",
+              primaryDark: "#8AE04A",
+            },
+            fontFamily: {
+              outfit: ["Outfit", "sans-serif"],
+              mono: ["Space Mono", "monospace"],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+      }
+      .glow {
+        box-shadow: 0 0 30px rgba(165, 252, 95, 0.15);
+      }
+      .glow-text {
+        text-shadow: 0 0 20px rgba(165, 252, 95, 0.3);
+      }
+      .fade-in {
+        animation: fadeIn 0.6s ease-out forwards;
+        opacity: 0;
+      }
+      @keyframes fadeIn {
+        to {
+          opacity: 1;
+        }
+      }
+      .fade-in:nth-child(2) {
+        animation-delay: 0.1s;
+      }
+      .fade-in:nth-child(3) {
+        animation-delay: 0.2s;
+      }
+      .fade-in:nth-child(4) {
+        animation-delay: 0.3s;
+      }
+      .cta-pulse {
+        animation: pulse 2s infinite;
+      }
+      @keyframes pulse {
+        0%,
+        100% {
+          box-shadow: 0 0 0 0 rgba(165, 252, 95, 0.4);
+        }
+        50% {
+          box-shadow: 0 0 0 12px rgba(165, 252, 95, 0);
+        }
+      }
+      .benefit-card:hover {
+        transform: translateY(-4px);
+      }
+      .benefit-card {
+        transition: transform 0.3s ease;
+      }
+    </style>
+    <style>
+      body {
+        box-sizing: border-box;
+      }
+    </style>
+    <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+  </head>
+  <body class="h-full bg-dark font-outfit text-gray-200 overflow-auto">
+    <div class="w-full min-h-full bg-dark">
+      <!-- Nav -->
+      <nav
+        class="w-full border-b border-gray-800 sticky top-0 bg-dark/95 backdrop-blur-sm z-50"
+      >
+        <div
+          class="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between"
+        >
+          <span class="font-mono font-bold text-primary text-lg tracking-tight"
+            >DIABO VERDE</span
+          >
+          <a
+            id="nav-cta"
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="bg-primary text-dark font-semibold text-sm px-5 py-2 rounded-lg hover:bg-primaryDark transition-colors"
+            >Comprar com Desconto</a
+          >
+        </div>
+      </nav>
+      <!-- Hero -->
+      <header class="w-full max-w-5xl mx-auto px-6 pt-16 pb-12 fade-in">
+        <div class="flex flex-col lg:flex-row items-center gap-10">
+          <div class="flex-1">
+            <span
+              class="inline-block bg-primary/10 text-primary font-mono text-xs font-bold tracking-widest uppercase px-3 py-1 rounded-full mb-5 border border-primary/20"
+              >Termogenico #1 do Brasil</span
+            >
+            <h1
+              id="blog-title"
+              class="text-4xl md:text-5xl lg:text-6xl font-black leading-tight text-white glow-text mb-6"
+            >
+              Diabo Verde FTW: O Termogenico Que Realmente Funciona
+            </h1>
+            <p class="text-gray-400 text-lg leading-relaxed mb-8 max-w-xl">
+              Descubra por que milhares de atletas e praticantes de atividade
+              fisica confiam no Diabo Verde para potencializar a queima de
+              gordura e elevar a performance nos treinos.
+            </p>
+            <a
+              id="hero-cta"
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-2 bg-primary text-dark font-bold text-base px-8 py-4 rounded-xl hover:bg-primaryDark transition-colors cta-pulse"
+            >
+              <span id="hero-cta-text">Garantir o Meu Agora</span>
+              <i data-lucide="arrow-right" class="w-5 h-5"></i>
+            </a>
+          </div>
+          <div
+            class="flex-shrink-0 w-64 h-64 lg:w-80 lg:h-80 rounded-2xl bg-darker border border-primary/20 glow overflow-hidden flex items-center justify-center"
+          >
+            <img
+              src="https://down-br.img.susercontent.com/file/br-11134207-81z1k-mi9otpx56woy4a.webp"
+              alt="Diabo Verde FTW"
+              class="w-full h-full object-cover"
+              loading="lazy"
+              onerror="
+                console.error('Image failed to load:', this.src);
+                this.style.background = '#A5FC5F';
+                this.alt = 'Diabo Verde FTW';
+              "
+            />
+          </div>
+        </div>
+      </header>
+      <!-- Benefits -->
+      <section class="w-full max-w-5xl mx-auto px-6 py-16 fade-in">
+        <h2 class="text-2xl md:text-3xl font-bold text-white text-center mb-12">
+          Por Que Escolher o Diabo Verde?
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div
+            class="benefit-card bg-darker border border-gray-800 rounded-xl p-6"
+          >
+            <div
+              class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4"
+            >
+              <i data-lucide="zap" class="w-6 h-6 text-primary"></i>
+            </div>
+            <h3 class="font-bold text-white text-lg mb-2">Energia Explosiva</h3>
+            <p class="text-gray-400 text-sm leading-relaxed">
+              Formulacao com cafeina e taurina que proporciona energia
+              sustentada durante todo o treino, sem crashes.
+            </p>
+          </div>
+          <div
+            class="benefit-card bg-darker border border-gray-800 rounded-xl p-6"
+          >
+            <div
+              class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4"
+            >
+              <i data-lucide="flame" class="w-6 h-6 text-primary"></i>
+            </div>
+            <h3 class="font-bold text-white text-lg mb-2">
+              Termogenese Potente
+            </h3>
+            <p class="text-gray-400 text-sm leading-relaxed">
+              Acelera o metabolismo e aumenta a temperatura corporal,
+              potencializando a queima de gordura de forma natural.
+            </p>
+          </div>
+          <div
+            class="benefit-card bg-darker border border-gray-800 rounded-xl p-6"
+          >
+            <div
+              class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4"
+            >
+              <i data-lucide="brain" class="w-6 h-6 text-primary"></i>
+            </div>
+            <h3 class="font-bold text-white text-lg mb-2">Foco Mental</h3>
+            <p class="text-gray-400 text-sm leading-relaxed">
+              Ingredientes nootropicos que melhoram a concentracao e a conexao
+              mente-musculo durante os exercicios.
+            </p>
+          </div>
+          <div
+            class="benefit-card bg-darker border border-gray-800 rounded-xl p-6"
+          >
+            <div
+              class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4"
+            >
+              <i data-lucide="shield-check" class="w-6 h-6 text-primary"></i>
+            </div>
+            <h3 class="font-bold text-white text-lg mb-2">Marca Confiavel</h3>
+            <p class="text-gray-400 text-sm leading-relaxed">
+              FTW e referencia nacional em suplementacao esportiva, com
+              laboratorio proprio e controle rigoroso de qualidade.
+            </p>
+          </div>
+          <div
+            class="benefit-card bg-darker border border-gray-800 rounded-xl p-6"
+          >
+            <div
+              class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4"
+            >
+              <i data-lucide="leaf" class="w-6 h-6 text-primary"></i>
+            </div>
+            <h3 class="font-bold text-white text-lg mb-2">
+              Ingredientes Naturais
+            </h3>
+            <p class="text-gray-400 text-sm leading-relaxed">
+              Composto por cha verde, gengibre, pimenta e outros ingredientes
+              naturais cientificamente comprovados.
+            </p>
+          </div>
+          <div
+            class="benefit-card bg-darker border border-gray-800 rounded-xl p-6"
+          >
+            <div
+              class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4"
+            >
+              <i data-lucide="trending-up" class="w-6 h-6 text-primary"></i>
+            </div>
+            <h3 class="font-bold text-white text-lg mb-2">Resultados Reais</h3>
+            <p class="text-gray-400 text-sm leading-relaxed">
+              Milhares de avaliacoes positivas de usuarios que comprovam a
+              eficacia do produto em seus objetivos fitness.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- How to use -->
+      <section class="w-full max-w-5xl mx-auto px-6 py-16 fade-in">
+        <div class="bg-darker border border-gray-800 rounded-2xl p-8 md:p-12">
+          <h2 class="text-2xl md:text-3xl font-bold text-white mb-8">
+            Como Utilizar
+          </h2>
+          <div class="space-y-6">
+            <div class="flex items-start gap-4">
+              <span
+                class="flex-shrink-0 w-8 h-8 bg-primary text-dark font-bold rounded-full flex items-center justify-center text-sm"
+                >1</span
+              >
+              <div>
+                <h4 class="font-semibold text-white mb-1">
+                  Dosagem Recomendada
+                </h4>
+                <p class="text-gray-400 text-sm">
+                  Tome 2 capsulas com agua, 30 minutos antes do treino. Nao
+                  exceda a dose diaria recomendada.
+                </p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <span
+                class="flex-shrink-0 w-8 h-8 bg-primary text-dark font-bold rounded-full flex items-center justify-center text-sm"
+                >2</span
+              >
+              <div>
+                <h4 class="font-semibold text-white mb-1">Melhor Horario</h4>
+                <p class="text-gray-400 text-sm">
+                  Evite tomar apos as 18h para nao comprometer a qualidade do
+                  sono. Ideal para treinos matutinos ou vespertinos.
+                </p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <span
+                class="flex-shrink-0 w-8 h-8 bg-primary text-dark font-bold rounded-full flex items-center justify-center text-sm"
+                >3</span
+              >
+              <div>
+                <h4 class="font-semibold text-white mb-1">Ciclo de Uso</h4>
+                <p class="text-gray-400 text-sm">
+                  Use por 8 semanas seguidas e faca uma pausa de 2 semanas para
+                  manter a sensibilidade aos estimulantes.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Testimonials -->
+      <section class="w-full max-w-5xl mx-auto px-6 py-16 fade-in">
+        <h2 class="text-2xl md:text-3xl font-bold text-white text-center mb-12">
+          O Que Dizem os Usuarios
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="bg-darker border border-gray-800 rounded-xl p-6">
+            <div class="flex items-center gap-1 mb-4">
+              <i
+                data-lucide="star"
+                class="w-4 h-4 text-primary fill-current"
+              ></i>
+              <i
+                data-lucide="star"
+                class="w-4 h-4 text-primary fill-current"
+              ></i>
+              <i
+                data-lucide="star"
+                class="w-4 h-4 text-primary fill-current"
+              ></i>
+              <i
+                data-lucide="star"
+                class="w-4 h-4 text-primary fill-current"
+              ></i>
+              <i
+                data-lucide="star"
+                class="w-4 h-4 text-primary fill-current"
+              ></i>
+            </div>
+            <p class="text-gray-300 text-sm mb-4 italic">
+              "Ja testei varios termogenicos e o Diabo Verde e disparado o
+              melhor. Energia limpa e resultado visivel em poucas semanas."
+            </p>
+            <span class="text-gray-500 text-xs font-mono"
+              >Rafael M. - Sao Paulo</span
+            >
+          </div>
+          <div class="bg-darker border border-gray-800 rounded-xl p-6">
+            <div class="flex items-center gap-1 mb-4">
+              <i
+                data-lucide="star"
+                class="w-4 h-4 text-primary fill-current"
+              ></i>
+              <i
+                data-lucide="star"
+                class="w-4 h-4 text-primary fill-current"
+              ></i>
+              <i
+                data-lucide="star"
+                class="w-4 h-4 text-primary fill-current"
+              ></i>
+              <i
+                data-lucide="star"
+                class="w-4 h-4 text-primary fill-current"
+              ></i>
+              <i
+                data-lucide="star"
+                class="w-4 h-4 text-primary fill-current"
+              ></i>
+            </div>
+            <p class="text-gray-300 text-sm mb-4 italic">
+              "Minha disposicao para treinar mudou completamente. Acordo
+              motivada sabendo que vou ter aquela energia extra."
+            </p>
+            <span class="text-gray-500 text-xs font-mono"
+              >Camila S. - Rio de Janeiro</span
+            >
+          </div>
+          <div class="bg-darker border border-gray-800 rounded-xl p-6">
+            <div class="flex items-center gap-1 mb-4">
+              <i
+                data-lucide="star"
+                class="w-4 h-4 text-primary fill-current"
+              ></i>
+              <i
+                data-lucide="star"
+                class="w-4 h-4 text-primary fill-current"
+              ></i>
+              <i
+                data-lucide="star"
+                class="w-4 h-4 text-primary fill-current"
+              ></i>
+              <i
+                data-lucide="star"
+                class="w-4 h-4 text-primary fill-current"
+              ></i>
+              <i
+                data-lucide="star"
+                class="w-4 h-4 text-primary fill-current"
+              ></i>
+            </div>
+            <p class="text-gray-300 text-sm mb-4 italic">
+              "Produto de qualidade, entrega rapida pela Shopee. Ja estou no
+              terceiro pote e nao troco por nenhum outro."
+            </p>
+            <span class="text-gray-500 text-xs font-mono"
+              >Lucas T. - Belo Horizonte</span
+            >
+          </div>
+        </div>
+      </section>
+      <!-- Final CTA -->
+      <section class="w-full max-w-5xl mx-auto px-6 py-16 fade-in">
+        <div
+          class="bg-gradient-to-br from-primary/10 to-darker border border-primary/20 rounded-2xl p-8 md:p-12 text-center glow"
+        >
+          <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">
+            Pronto Para Transformar Seus Treinos?
+          </h2>
+          <p class="text-gray-400 mb-8 max-w-lg mx-auto">
+            Aproveite o melhor preco disponivel na Shopee com frete gratis e
+            cupons exclusivos. Estoque limitado.
+          </p>
+          <a
+            id="final-cta"
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 bg-primary text-dark font-bold text-lg px-10 py-5 rounded-xl hover:bg-primaryDark transition-colors cta-pulse"
+          >
+            <i data-lucide="shopping-bag" class="w-5 h-5"></i>
+            <span id="final-cta-text">Comprar na Shopee com Desconto</span>
+          </a>
+          <p class="text-gray-500 text-xs mt-4">
+            Voce sera redirecionado para a loja oficial na Shopee
+          </p>
+        </div>
+      </section>
+      <!-- Footer -->
+      <footer class="w-full border-t border-gray-800 mt-8">
+        <div class="max-w-5xl mx-auto px-6 py-8 text-center">
+          <p id="footer-text" class="text-gray-500 text-xs">
+            Este site contem links de afiliado. Ao comprar atraves dos nossos
+            links, voce nos ajuda a manter este conteudo sem custo adicional
+            para voce. Resultados podem variar de pessoa para pessoa. Consulte
+            um profissional de saude antes de iniciar qualquer suplementacao.
+          </p>
+        </div>
+      </footer>
+    </div>
+    <script>
+      const defaultConfig = {
+        blog_title: "Diabo Verde FTW: O Termogenico Que Realmente Funciona",
+        cta_text: "Garantir o Meu Agora",
+        affiliate_url: "https://s.shopee.com.br/9KeUzr1Fza",
+        background_color: "#1A1A1A",
+        surface_color: "#111111",
+        text_color: "#E5E7EB",
+        primary_color: "#A5FC5F",
+        secondary_color: "#9CA3AF",
+        font_family: "Outfit",
+        font_size: 16,
+      };
+
+      function applyConfig(config) {
+        const title = document.getElementById("blog-title");
+        const heroCta = document.getElementById("hero-cta");
+        const heroCtaText = document.getElementById("hero-cta-text");
+        const navCta = document.getElementById("nav-cta");
+        const finalCta = document.getElementById("final-cta");
+        const finalCtaText = document.getElementById("final-cta-text");
+
+        if (title)
+          title.textContent = config.blog_title || defaultConfig.blog_title;
+        if (heroCtaText)
+          heroCtaText.textContent = config.cta_text || defaultConfig.cta_text;
+
+        const url = config.affiliate_url || defaultConfig.affiliate_url;
+        [heroCta, navCta, finalCta].forEach((el) => {
+          if (el) el.href = url;
+        });
+
+        const font = config.font_family || defaultConfig.font_family;
+        document.body.style.fontFamily = `${font}, Outfit, sans-serif`;
+
+        const size = config.font_size || defaultConfig.font_size;
+        document.body.style.fontSize = `${size}px`;
+        if (title) title.style.fontSize = `${size * 3}px`;
+      }
+
+      window.elementSdk.init({
+        defaultConfig,
+        onConfigChange: async (config) => {
+          applyConfig(config);
+        },
+        mapToCapabilities: (config) => ({
+          recolorables: [
+            {
+              get: () =>
+                config.background_color || defaultConfig.background_color,
+              set: (v) => {
+                config.background_color = v;
+                window.elementSdk.setConfig({ background_color: v });
+              },
+            },
+            {
+              get: () => config.surface_color || defaultConfig.surface_color,
+              set: (v) => {
+                config.surface_color = v;
+                window.elementSdk.setConfig({ surface_color: v });
+              },
+            },
+            {
+              get: () => config.text_color || defaultConfig.text_color,
+              set: (v) => {
+                config.text_color = v;
+                window.elementSdk.setConfig({ text_color: v });
+              },
+            },
+            {
+              get: () => config.primary_color || defaultConfig.primary_color,
+              set: (v) => {
+                config.primary_color = v;
+                window.elementSdk.setConfig({ primary_color: v });
+              },
+            },
+            {
+              get: () =>
+                config.secondary_color || defaultConfig.secondary_color,
+              set: (v) => {
+                config.secondary_color = v;
+                window.elementSdk.setConfig({ secondary_color: v });
+              },
+            },
+          ],
+          borderables: [],
+          fontEditable: {
+            get: () => config.font_family || defaultConfig.font_family,
+            set: (v) => {
+              config.font_family = v;
+              window.elementSdk.setConfig({ font_family: v });
+            },
+          },
+          fontSizeable: {
+            get: () => config.font_size || defaultConfig.font_size,
+            set: (v) => {
+              config.font_size = v;
+              window.elementSdk.setConfig({ font_size: v });
+            },
+          },
+        }),
+        mapToEditPanelValues: (config) =>
+          new Map([
+            ["blog_title", config.blog_title || defaultConfig.blog_title],
+            ["cta_text", config.cta_text || defaultConfig.cta_text],
+            [
+              "affiliate_url",
+              config.affiliate_url || defaultConfig.affiliate_url,
+            ],
+          ]),
+      });
+
+      applyConfig(defaultConfig);
+      lucide.createIcons();
+    </script>
+    <script>
+      (function () {
+        function c() {
+          var b = a.contentDocument || a.contentWindow.document;
+          if (b) {
+            var d = b.createElement("script");
+            d.innerHTML =
+              "window.__CF$cv$params={r:'9f8b28d1606ce11b',t:'MTc3ODI3MTU2Ny4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";
+            b.getElementsByTagName("head")[0].appendChild(d);
+          }
+        }
+        if (document.body) {
+          var a = document.createElement("iframe");
+          a.height = 1;
+          a.width = 1;
+          a.style.position = "absolute";
+          a.style.top = 0;
+          a.style.left = 0;
+          a.style.border = "none";
+          a.style.visibility = "hidden";
+          document.body.appendChild(a);
+          if ("loading" !== document.readyState) c();
+          else if (window.addEventListener)
+            document.addEventListener("DOMContentLoaded", c);
+          else {
+            var e = document.onreadystatechange || function () {};
+            document.onreadystatechange = function (b) {
+              e(b);
+              "loading" !== document.readyState &&
+                ((document.onreadystatechange = e), c());
+            };
+          }
+        }
+      })();
+    </script>
+  </body>
+</html>
